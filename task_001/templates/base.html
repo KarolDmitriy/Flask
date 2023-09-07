@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Интернет-магазин</title>
+    <!-- Вставьте сюда ваши стили и скрипты -->
+</head>
+<body>
+    <header>
+        <!-- Шапка сайта -->
+        <h1>Интернет-магазин</h1>
+        <nav>
+            <!-- Меню сайта -->
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/clothing">Одежда</a></li>
+                <li><a href="/jacket">Рубашки</a></li>
+                <li><a href="/shoes">Обувь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- Содержимое страницы -->
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <!-- Подвал сайта -->
+        &copy; 2023 Интернет-магазин
+    </footer>
+</body>
+</html>
