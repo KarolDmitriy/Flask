@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            <label for="first_name">First Name:</label>
+            {{ form.first_name() }}
+        </p>
+        <p>
+            <label for="last_name">Last Name:</label>
+            {{ form.last_name() }}
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            {{ form.email() }}
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            {{ form.password() }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
