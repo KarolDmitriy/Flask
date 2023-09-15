@@ -1,0 +1,14 @@
+Получить список всех задач
+http GET http://localhost:8000/tasks
+
+Создать новую задачу
+http POST http://localhost:8000/tasks task_id:=1 title="Task 1" description="Description of Task 1" status:=false
+
+Получить задачу по ID (заменить {task_id} на фактический идентификатор задачи)
+http GET http://localhost:8000/tasks/{task_id}
+
+Обновить задачу по ID
+http PUT http://localhost:8000/tasks/{task_id} task_id:=1 title="Updated Task 1" description="Updated description of Task 1" status:=true
+
+Удалить задачу по ID
+http DELETE http://localhost:8000/tasks/{task_id}
