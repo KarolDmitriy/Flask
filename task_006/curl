@@ -1,0 +1,112 @@
+Создать товар:
+Invoke-RestMethod -Method POST `
+-Uri 'http://127.0.0.1:8000/products/' `
+-Headers @{"accept"="application/json"} `
+-ContentType 'application/json' `
+-Body '{
+  "name": "Product 2",
+  "description": "Product 2 description",
+  "price": 19.99
+}'
+
+Получить список всех товаров:
+Invoke-RestMethod -Method GET `
+-Uri 'http://127.0.0.1:8000/products/' `
+-Headers @{"accept"="application/json"}
+
+Получить товар по ID (замените {product_id} на фактический ID товара):
+Invoke-RestMethod -Method GET `
+-Uri 'http://127.0.0.1:8000/products/{product_id}' `
+-Headers @{"accept"="application/json"}
+
+Обновить товар по ID (замените {product_id} на фактический ID товара):
+Invoke-RestMethod -Method PUT `
+-Uri 'http://127.0.0.1:8000/products/{product_id}' `
+-Headers @{"accept"="application/json"} `
+-ContentType 'application/json' `
+-Body '{
+  "name": "New product name",
+  "description": "New product description",
+  "price": 29.99
+}'
+
+Удалить товар по ID (замените {product_id} на фактический ID товара):
+Invoke-RestMethod -Method DELETE `
+-Uri 'http://127.0.0.1:8000/products/1' `
+-Headers @{"accept"="application/json"}
+
+Создать заказ:
+Invoke-RestMethod -Method POST `
+-Uri 'http://127.0.0.1:8000/orders/' `
+-Headers @{"accept"="application/json"} `
+-ContentType 'application/json' `
+-Body '{
+  "user_id": 1,
+  "product_id": 1,
+  "status": "In processing"
+}'
+
+Получить список всех заказов:
+Invoke-RestMethod -Method GET `
+-Uri 'http://127.0.0.1:8000/orders/' `
+-Headers @{"accept"="application/json"}
+
+Получить заказ по ID (замените {order_id} на фактический ID заказа):
+Invoke-RestMethod -Method GET `
+-Uri 'http://127.0.0.1:8000/orders/{order_id}' `
+-Headers @{"accept"="application/json"}
+
+Обновить заказ по ID (замените {order_id} на фактический ID заказа):
+Invoke-RestMethod -Method PUT `
+-Uri 'http://127.0.0.1:8000/orders/1' `
+-Headers @{"accept"="application/json"} `
+-ContentType 'application/json' `
+-Body '{
+  "user_id": 2,
+  "product_id": 2,
+  "status": "Completed"
+}'
+
+Удалить заказ по ID (замените {order_id} на фактический ID заказа):
+Invoke-RestMethod -Method DELETE `
+-Uri 'http://127.0.0.1:8000/orders/{order_id}' `
+-Headers @{"accept"="application/json"}
+
+Создать пользователя:
+Invoke-RestMethod -Method POST `
+-Uri 'http://127.0.0.1:8000/users/' `
+-Headers @{"accept"="application/json"} `
+-ContentType 'application/json' `
+-Body '{
+  "first_name": "Alex",
+  "last_name": "Bond",
+  "email": "abond@mail.com",
+  "password": "password123"
+}'
+
+Получить список всех пользователей:
+Invoke-RestMethod -Method GET `
+-Uri 'http://127.0.0.1:8000/users/' `
+-Headers @{"accept"="application/json"}
+
+Получить пользователя по ID (замените {user_id} на фактический ID пользователя):
+Invoke-RestMethod -Method GET `
+-Uri 'http://127.0.0.1:8000/users/{user_id}' `
+-Headers @{"accept"="application/json"}
+
+Обновить пользователя по ID (замените {user_id} на фактический ID пользователя):
+Invoke-RestMethod -Method PUT `
+-Uri 'http://127.0.0.1:8000/users/{user_id}' `
+-Headers @{"accept"="application/json"} `
+-ContentType 'application/json' `
+-Body '{
+  "first_name": "New name",
+  "last_name": "New last name",
+  "email": "new_email@mail.com",
+  "password": "new_password123"
+}'
+
+Удалить пользователя по ID (замените {user_id} на фактический ID пользователя):
+Invoke-RestMethod -Method DELETE `
+-Uri 'http://127.0.0.1:8000/users/{user_id}' `
+-Headers @{"accept"="application/json"}
